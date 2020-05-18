@@ -3,9 +3,9 @@
 
 unsigned const char payload[] =
 
-#SHELLCODE
+//shellcode
 
-size_t size = 0; #TAMAÑO
+size_t size = 0; //tamaño shellcode
 
 int main(int argc, char** argv) {
 	
