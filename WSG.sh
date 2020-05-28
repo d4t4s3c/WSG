@@ -203,6 +203,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 clear
 tput civis
 checkroot
+clear
 banner
 main
 tput cnorm
