@@ -1,6 +1,6 @@
 # Windows Shellcode Generator (Visual Studio)
 
-Pentesting tool for SMB (Samba) protocol in Microsoft Windows (Metasploit-Framework)
+
 
 # ONLY USE FOR EDUCATIONAL PURPOSES
 
