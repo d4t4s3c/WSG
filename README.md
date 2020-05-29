@@ -1,7 +1,3 @@
-# Windows Shellcode Generator (Visual Studio)
-
-
-
 # ONLY USE FOR EDUCATIONAL PURPOSES
 
 **Screenshot**
